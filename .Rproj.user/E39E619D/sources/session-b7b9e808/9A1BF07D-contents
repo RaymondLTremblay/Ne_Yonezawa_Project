@@ -1,0 +1,22 @@
+STAGES <- c("one_leaf","multileaf_nonfl","multileaf_flower")
+
+read_mtx <- function(f) as.matrix(read.csv(file.path("data_raw", f), row.names = 1, check.names = FALSE))
+
+eig_dom <- function(A){
+  ev  <- eigen(A)
+  i   <- which.max(Re(ev$values))
+  lam <- Re(ev$values[i])
+  w   <- Re(ev$vectors[, i]); w <- w / sum(w)
+  vt  <- eigen(t(A))
+  j   <- which.max(Re(vt$values))
+  v   <- Re(vt$vectors[, j]); v <- v / as.numeric(crossprod(v, w))
+  list(lambda=lam, w=w, v=v)
+}
+
+for (file in c("yonezawa_miz_table2.csv", "yonezawa_nan_table2.csv")) {
+  A <- read_mtx(file)
+  e <- eig_dom(A)
+  cat("\n===", file, "===\n")
+  print(e$lambda)
+  print(round(e$w, 3))
+}

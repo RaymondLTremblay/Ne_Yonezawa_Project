@@ -1,0 +1,26 @@
+Yonezawa (2000) EXACT replication for population: Nan
+Inputs: Table 2 U, F, D (Observed & Expected); Table 4 L.
+
+Equation mapping (see PDF):
+  (1)-(2): variance decomposition -> defines survival vs recruitment components.
+  (3)-(4): S_i, A_i; here a=0, Poisson clonal => S_i=1, A_i=1.
+  (5): variance V uses u_bar^2 - overline(u^2) and (1 - u_bar) terms.
+       The empirical Ny/N and Ne/N reported in Table 4 are matched by using overline(u^2):
+         Ny/N = 1 / (1 - overline(u^2))
+         Ne/N = 1 / ( L * (1 - overline(u^2)) )
+       (We also compute the textual Eq. (10)-(11) forms using u_bar for comparison.)
+
+Observed D:  0.958, 0.027, 0.015
+Expected D:  0.951, 0.034, 0.015
+u (colSums U): 0.755, 1, 1
+L (Table 4): 8.353
+
+Observed results:
+  overline(u^2) = 0.588084 | u_bar = 0.765290 | sum r = 0.282315
+  Ny/N (Table-4 form) = 2.427679 | Ne/N (Table-4 form) = 0.290636
+  Ny/N (Eq. 11 form)   = 4.260577 | Ne/N (Eq. 10 form)   = 0.255033
+
+Expected results:
+  overline(u^2) = 0.591094 | u_bar = 0.767005 | sum r = 0.300760
+  Ny/N (Table-4 form) = 2.445548 | Ne/N (Table-4 form) = 0.292775
+  Ny/N (Eq. 11 form)   = 4.291938 | Ne/N (Eq. 10 form)   = 0.256910

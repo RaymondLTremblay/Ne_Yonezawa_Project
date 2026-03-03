@@ -1,0 +1,9 @@
+# Ne Yonezawa Pipeline — Changelog
+
+## v0.1 (2026-03-03)
+- Project initialized as `Ne_Yonezawa_Project`.
+- Created standard folder structure: `data_raw/`, `data_processed/`, `R/`, `scripts/`, `output/`, `logs/`.
+- Added initial scaffold files:
+  - `R/Ne_Yonezawa_pipeline_v0.1.R`
+  - `scripts/run_Yonezawa_v0.1.R`
+- Core function `compute_ne_yonezawa()` is a placeholder pending matrix and variance inputs.
