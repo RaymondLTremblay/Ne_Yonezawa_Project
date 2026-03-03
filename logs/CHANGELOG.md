@@ -50,3 +50,8 @@
  - Added generic paper-exact function for any U,F,D,L (A).
 - Added generation-time L(U,F) from the paper's age-by-stage definition (B).
 - Added mode='sexual_only' with eigen-based D by default (C). 
+
+## v0.5.0 (2026-03-03)
+ - Added generic paper-exact function for any U,F,D,L (A).
+- Added generation-time L(U,F) from the paper's age-by-stage definition (B).
+- Added mode='sexual_only' with eigen-based D by default (C). 
